@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio-Stream</title>
+    <link rel="stylesheet" href="radiostyle.css">
+</head>
+<body>
+
+    <div class="hero">
+        <div class="navbar">
+            <a href="index.html" >
+            <img src="assets/images/logo2.jpg" class="logo"> </a>
+        </div>
+        <div class="content">
+            <div class="left">
+                <h4>Rugged Youth 4Christ | Radio | Live-Stream
+                </h4>
+                <p>Everyday | Monday to Sunday | <strong><span>5:15am - 5:30am</span></strong> </p>
+                <p>Featuring
+                    *Salvation
+                    *Healing
+                    *Deliverance
+                    *Breakthrough
+                    Healing & lots more..<br><span>Pst. Odunayo David Tobiloba</span></p>
+                
+            </div>
+            <div class="right">
+                <p>Join The Radio Live</p>
+                <img src="assets/images/play.png" id="icon">
+            </div>
+        </div>
+    </div>
+
+    <audio id="mysong">
+        <source src="https://cast5.my-control-panel.com/proxy/princefm/stream?listening-from-radio-garden=1685336566" type="audio/mp3">
+    </audio>
+    
+    <script>
+
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+        
+        icon.onclick = function(){
+            if(mysong.paused){
+                mysong.play();
+                icon.src = "assets/images/pause.png";
+            }else{
+                mysong.pause();
+                icon.src = "assets/images/play.png";
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
